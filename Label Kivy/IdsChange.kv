@@ -1,0 +1,30 @@
+<OperativeClass>:
+	id: oper
+	orientation: "vertical"
+	canvas:
+		Color:
+			rgb: 1,0,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	
+	BoxLayout:
+		orientation: "horizontal"
+		padding: 10
+		spacing: 10
+		Button:
+			text: "Python"
+			on_press: oper.election(" [b]Python[/b]")
+			size_hint: 1,1
+		Button:
+			text: "C++"
+			on_press: oper.election(" [b]C++[/b]")
+			size_hint: 1,1
+	
+	Label:
+		id: operation
+		font_size: "40sp"
+		markup: True
+		text: "Select A Button"
+		
+		

@@ -1,0 +1,94 @@
+
+<OperativeClass>:
+	id: first
+	padding: 20
+	spacing: 20
+	editable_button: edit_button
+	orientation: "vertical"
+	canvas:
+		Color:
+			rgb: 0.5,1,1
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	
+	Button:
+		id: edit_button
+		markup: True
+		size_hint: 1,None
+		height: 100
+		text: "Add [b]New[/b]"
+		background_color: [0.5,0.7,0.7]
+		on_press: app.root.current = "screen2"
+		
+<OperationalAdd>:
+	id: add
+	size_hint: 1,None
+	height: 100
+	canvas:
+		Color:
+			rgb: 0,1,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	Label:
+		id: changer
+		text: "Edit Me!"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+			
+	Button: 
+		size_hint: None,1
+		width: 20
+		text: "Edit!"
+		on_press: add.change_screen()
+			
+			
+
+<OperativeSecond>:
+	id: second
+	orientation: "vertical"
+	display: text_message
+	padding: 10
+	spacing: 10
+	canvas:
+		Color:
+			rgb: 0,0,1
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	Label:
+		id: inputy
+		text: "Input the Text!"
+		font_size: "40sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	Label:
+		text: "Nombre: " + text_message.text
+		font_size: "30sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	TextInput:
+		id: text_message
+		multiline: False
+		size_hint: 1, None
+		height: 70
+	Button:
+		id: send
+		text: "Send!"
+		size_hint: 1,None
+		height: 100
+		on_press: second.oper()
+	Button:
+		id: back
+		text: "Back!"
+		size_hint: 1,None
+		height: 100
+		on_press: app.root.current = "screen1"
+		
+		
+		

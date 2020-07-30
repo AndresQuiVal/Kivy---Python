@@ -1,0 +1,75 @@
+<OperativeClass>:
+	orientation: "vertical"
+	id: base_operator
+	spacing: 10
+	padding: 10
+	canvas:
+		Color:
+			rgb: 0,1,0.5
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	Label:
+		markup: True
+		text: "[b]Bold Text![/b]"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	Label:
+		markup: True
+		text: "[i]Italic Text![/i]"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	
+	Label:
+		markup: True
+		text: "[u]Underlined text![/u]"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	Label:
+		markup: True
+		text: "[s]Cross Text![/s]"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	Label:
+		markup: True
+		text: "[size=40]Taller Text![/size]"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	Label:
+		markup: True
+		text: "[color=F3C423]Another Color![/color]"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	Label:
+		markup: True
+		text: "[ref=hello]Button Act![/ref]"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+		on_ref_press: base_operator.print_it()
+	Label:
+		markup: True
+		text: "[sub]Subscript[/sub]Text!"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+	Label:
+		markup: True
+		text: "[sup]Subscript[/sup]Text!"
+		font_size: "20sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"

@@ -1,0 +1,39 @@
+<operClass>:
+	padding: 20
+	spacing: 20
+	orientation: "vertical"
+	canvas:
+		Color:
+			rgb: 1,0,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+			
+	BoxLayout:
+		size_hint: 1,None
+		height: 160
+		canvas:
+			Color:
+				rgb: 0,1,0
+			Rectangle:
+				size: self.size
+				pos: self.pos
+				
+	BoxLayout:
+		size_hint: 1,None
+		height: 160
+		canvas:
+			Color:
+				rgb: 0,0,1
+			Rectangle:
+				size: self.size
+				pos: self.pos
+		Label:
+			text: "Hello World!"
+			font_size: "30sp"
+		
+		Button:
+			id: editable_button
+			text: "Edit"
+			size_hint: None,1
+			width: 40

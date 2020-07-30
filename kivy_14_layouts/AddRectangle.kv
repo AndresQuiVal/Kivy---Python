@@ -1,0 +1,62 @@
+
+<OperativeClass>:
+	id: base
+	cols: 1
+	padding: 30
+	spacing: 36
+	canvas:
+		Color: 
+			rgb: .4,.7,.7
+		Rectangle:
+			size: self.size
+			pos: self.pos
+		
+	Label:
+		id: text_lbl
+		text: "My Data!"
+		font_size: "50sp"
+		text_size: self.size
+		valign: "top"
+		halign: "left"
+		bold: True
+		canvas.before:
+			Color:
+				rgb: .4,.7,.7
+			Rectangle:
+				size: text_lbl.size
+				pos: text_lbl.pos
+	
+	Button:
+		text: "+"
+		bold: True
+		background_color: [1,1,1,1]
+		color: [0,0,0,1]
+		font_size: "80sp"
+		size_hint: 1,None
+		height: 100
+		on_press: base.on_command()
+	
+
+
+<FirstLayout>:
+	id: base_layout
+	size_hint: 1,None
+	height: 150
+	cols: 1
+	canvas:
+		Color:
+			rgb: 0,1,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	Label:
+		text: "Name: Andres\nLastName: Quiroz Valdovinos\nSection: Software Engineer\nSalary: 100,000 Pesos"
+	Button:
+		text: "Edit"
+		size_hint: 1,None
+		height: 30
+		pos: self.pos
+		on_press: base_layout.print_result()
+		
+
+		

@@ -1,0 +1,31 @@
+<OperativeClass>:
+	anchor_x: "center"
+	anchor_y: "top"
+	padding: 10
+	spacing: 10
+	canvas:
+		Color:
+			rgb: 1,0,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+<InsiderButton>:
+	size_hint: None,None
+	size: [250,100]
+	anchor_y: "top"
+	canvas:
+		Color:
+			rgb: 0,1,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	Label:
+		text: "Hola Mundo!"
+	
+	AnchorLayout:
+		anchor_x: "right" 
+		Button:
+			size_hint: None,1
+			width: 20
+			text: "Anchor Layout Command!"

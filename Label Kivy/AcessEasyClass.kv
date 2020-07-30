@@ -1,0 +1,21 @@
+<MainClass>:
+	padding: 10
+	sapcing: 10
+	id: container
+	padding: 10
+	spacing: 10
+	orientation: "vertical"
+	canvas:
+		Color:
+			rgb: 1,0,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+<AddButton>:
+	text: "Add More"
+	size_hint: 1, None
+	height: 100
+	on_press: root.change_screen()
+
+		

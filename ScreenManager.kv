@@ -1,0 +1,21 @@
+#: import SwapTransition kivy.uix.screenmanager.SwapTransition
+
+ScreenManage:
+	transition: SwapTransition()
+	MainScreen:
+	SecondScreen:
+
+<MainScreen>:
+	name: "main"
+	Button:
+		on_release: app.root.current="other"
+		text: "Next Screen!"
+		font_size: 50
+	
+<SecondScreen>:
+	name: "other"
+	Button:
+		on_release: app.root.current="main"
+		text: "Main Screen!"
+		font_size: 50
+	

@@ -1,0 +1,42 @@
+#: import SwapTransition kivy.uix.screenmanager.SwapTransition
+
+ScreenManage:
+	transition: SwapTransition()
+	MainScreen:
+	SecondScreen:
+
+<MainScreen>:
+	name: "mainScreen"
+	Button:
+		color: [0,1,1,1]
+		background_color: [1,0,1,1]
+		font_size: 50
+		on_press: app.root.current = "secondScreen"
+		text: "Draw Yo!\n By Andres_QuiVal"
+		strikethrough: True
+		bold: True 
+
+
+<SecondScreen>:
+	name: "secondScreen"
+	FloatLayout:
+		CursorApplication:
+			id: painter
+		Button:
+			text: "Main Screen!"
+			font_size: 14
+			color: [0,0,1,1]
+			on_release: app.root.current = "mainScreen"
+			background_color: [1,0,0,1]
+			size_hint: [0.15,0.1]
+			pos_hint: {"x": 0, "top": 1}
+			
+		Button:
+			text: "Clear!"
+			size_hint: [1, 0.09]
+			background_color: [0,1,0,1]
+			on_release: painter.canvas.clear()
+		
+
+		
+			

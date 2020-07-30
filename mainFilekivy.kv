@@ -1,0 +1,18 @@
+#File Name: myinc_kv.py
+#:kivy 1.9.1
+
+<MainWindow>:
+	FloatLayout:
+		Label: 
+			text:"My Inc!"
+			bold: True
+			size_hint: [1, 1]
+			font_size: "40sp"
+			pos_hint: {"x": 0.6, "top": 5.8}
+		Button:
+			text: "New Person +!"
+			size_hint: [2.5, 0.5]
+		Button:
+			text: "Delete Person -!"
+			size_hint: [2.5, 0.5]
+			pos_hint: {"y": 0, "top": 0}

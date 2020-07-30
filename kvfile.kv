@@ -1,0 +1,37 @@
+#: import SlideTransition kivy.uix.screenmanager.SlideTransition
+
+ScreenManagment:
+	transition: SlideTransition()
+	MainWindow:
+	SecondWindow:
+	
+<ClassApplication>:
+	FloatLayout:
+		Button:
+			text: "Add New!"
+			font_size: "20sp"
+			size_hint: [0.3, 0.1]
+			on_press: app.root.current = "secondLayout"
+		Button:
+			text: "Delete!"
+			font_size: "20sp"
+			size_hint: [0.3, 0.1]
+			pos: [560, 0]
+			on_release: app.root.current = "tercera"
+		
+<MainWindow>:
+	name: "mainLayout"
+	FloatLayout:
+		ClassApplication
+			
+<SecondWindow>:
+	name: "secondLayout"
+	Label:
+		text: "Hello World!"
+
+<ThirdWindow>:
+	name: "tercera"
+	Label:
+		text: "GoodBye World!"
+
+			

@@ -1,0 +1,43 @@
+	
+<PopClass>:
+	id: pop_up
+	title: "Error!"
+	title_color: [1,0,0,1]
+	#separator_height: 20
+	separator_color: [5,1,0,1]
+	#auto_dismiss: False
+	size_hint: 1,1
+	#size: [800,500]
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "One Or More Fields Are Emtpy!"
+			font_size: "30sp"
+			bold: True
+			#size_hint: 1,None
+			#on_press: pop_up.dismiss()
+		Button:
+			text: "Close!"
+			size_hint: 1,None
+			on_press: pop_up.dismiss()
+			background_color: [8,3,0,1]
+			color: [0,0,0,1]
+			
+<OperativeClass>:
+	canvas:
+		Color:
+			rgb: 3,2,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	padding: 10
+	spacing: 10
+	id: oper
+	Button:
+		text: "Show Pop"
+		size_hint: None,None
+		size: [140,40]
+		on_press: root.instance.open()
+		background_color: [5,1,0,1]
+	
+	

@@ -1,0 +1,32 @@
+<OperativeClass>:
+	orientation: "vertical"
+	id: operative
+	id_text: ""
+	padding: 10
+	spacing: 10
+	canvas:
+		Color:
+			rgb: 0,1,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	TextInput:
+		id: display
+		size_hint: 1, None
+		height: 50
+		
+	Button:
+		size_hint: None, None
+		size: [50, 30]
+		text: "Add!"
+		on_press: operative.add_label()
+
+<EditableLabel>:
+	canvas:
+		Color:
+			rgb: 0,0,1
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	
+	

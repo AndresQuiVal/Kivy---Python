@@ -1,0 +1,72 @@
+<DropMenu>:
+	id: d_menu
+	Button:
+		text: "Menu!"
+		size_hint: None,None
+		size: [300,100]
+	Button:
+		text: "First_Selection"
+		size_hint: None, None
+		size: [300,100]
+	Button:
+		text: "Second_Selection"
+		size_hint: None, None
+		size: [300,100]
+		#on_release: d_menu.print_another()
+
+<OperativeClass>:
+	orientation: "vertical"
+	canvas:
+		Color:
+			rgb: 0,1,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+		Ellipse:
+			size: self.size
+			pos: self.pos
+
+<OperativeButton>:
+	size_hint: None, None
+	size: [500,100]
+	canvas:
+		Color:
+			rgb: 0,0,1
+		Rectangle:
+			size: self.size
+			pos: self.pos
+		Ellipse:
+			size: [100,100]
+			pos: self.pos
+		Ellipse:
+			size: [100,100]
+			pos: self.pos
+		Ellipse:
+			size: [100,100]
+			pos: self.pos
+		Ellipse:
+			size: [100,100]
+			pos: self.pos
+		Ellipse:
+			size: [100,100]
+			pos: self.pos
+	Button:
+		text: "Hello World!"
+		size_hint: None, None
+		size: [100,100]
+		background_normal: "AddIcon.png"
+		
+		
+	
+	#Button:
+	#	text: "Hello World!"
+	#	size: root.size
+	#	pos: root.pos
+		#border: [10,10,10,10]
+		#canvas:
+		#	Color:
+		#		rgb: 0,1,1
+		#	Rectangle:
+		#		size: self.size
+		#		pos: self.pos
+	

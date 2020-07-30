@@ -1,0 +1,20 @@
+#File Name: kivy_13_StringProperty_cambiar_propiedades_de_widgets.py
+#: kivy 1.9.1
+
+<ObjectificationClass>:
+	id: basic_class
+	padding: 10
+	spacing: 10
+	cols: 1
+	Button:
+		text: basic_class.change_var
+		on_press: basic_class.agregarButton()
+
+<Call_Button>:
+	id: call
+	spacing: 10
+	padding: 10
+	cols: 1
+	Button:
+		text: "Command On!"
+		on_press: basic_class.change_text()

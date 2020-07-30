@@ -1,0 +1,114 @@
+<CurrentScreen>:
+	padding: 10
+	spacing: 10
+	orientation: "vertical"
+	canvas:
+		Color:
+			rgb: 0,1,0
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	
+	Button:
+		text: "Go Unto Screen2"
+		on_press: app.root.current = "second_screen"
+		size_hint: 1,None
+		height: 100
+
+
+<SecondScreen>:
+	id: second_layout
+	cols: 1
+	canvas:
+		Color:
+			rgb: 0.2,.2,.2,1
+		Rectangle:
+			size: self.size
+			pos: self.pos
+	
+	ActionBar:
+		background_color: [0,0,0,0]
+		ActionView:
+			padding: 5
+			spacing: 5
+			ActionOverflow:
+				overflow_image: "over.png"
+				ActionButton: # <-- DESDE AQUI EN EL CEL SE CREA EL BOTON CON 3 PUNTOS
+					text: "Open Drop"
+					on_press: second_layout.open_dropMenu()
+				#ActionButton:
+				#	text: "DROP!"
+				#	on_press: root.open_dropMenu()
+			#background_color: [1,0,0,1]
+			#ActionGroup:
+			ActionPrevious:
+			#	app_icon: "negro.png"
+				app_icon: ""
+				#app_icon_width: 0
+				#app_icon_height: 0
+				#title: "Nuevo!"
+			#	previous_image: "back.png"
+				previous_image: ""
+				#with_previous:  False
+			#	on_press: app.root.current = "current_screen"
+				#size_hint: None,1
+				#width: 1000
+			#ActionSeparator:
+			#ActionButton:
+			#	text: "Hello World!"
+			#	on_press: second_layout.call_operative_class2()
+			#ActionSeparator:
+			#	background_image: ""
+			#ActionSeparator:
+			#	background_image: ""
+			#ActionSeparator:
+			#	background_image: ""
+			#ActionSeparator:
+			#	background_image: ""
+			#ActionSeparator:
+			#	background_image: ""
+			#ActionGroup:
+			#	title: "Settings"
+			#ActionButton:
+			#	text: "Close"
+			#	on_press: app.stop(
+			
+			#ActionGroup: # <-- SE CREA UN ESPECIE DE BOTTON CON UNA FLECHA QUE CONTIENE LOS WIDGETS
+			#	PersonalizeButton:
+			#		on_press: second_layout.print_it()
+			#	ActionButton:
+			#		text: "HolaMundo!"
+				
+	Label:
+		bold: True
+		text: "My Inc!"
+		font_size: "60sp"
+		text_size: self.size
+		halign: "center"
+		valign: "top"
+
+<DropMenu>:
+	id: drop_menu
+	Button:
+		text: "Edit"
+		size_hint: None, None
+		size: [300,100]
+	Button:
+		text: "Delete"
+		size_hint: None,None
+		size: [300,100]
+
+<PersonalizeButton>:
+	id: btn3
+	text: "Succes!"
+	size_hint: None, None
+	size: [100,35]
+	background_color: [8,3,0,1]
+	color: [0,0,0,1]
+	
+
+
+	
+	
+	
+			

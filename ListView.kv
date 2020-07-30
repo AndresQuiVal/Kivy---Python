@@ -1,0 +1,48 @@
+#: import main listview_kivy
+#: import ListAdapter kivy.adapters.listadapter.ListAdapter
+#: import ListItemButton kivy.uix.listview.ListItemButton
+
+MainClass:
+
+<MainClass>:
+	id: man
+	orientation: "vertical"
+	studentName: name
+	lastName: last
+	listView: list
+	padding: 10
+	spacing: 10
+	
+	BoxLayout:
+		size_hint_y: None
+		height: "40dp"
+		Label:
+			text: "First Name"
+		TextInput:
+			id: name
+		Label:
+			text: "Last Name"
+		TextInput:
+			id: last
+	
+	BoxLayout:
+		size_hint_y: None
+		height: "40dp"
+		Button:
+			text: "Submit!"
+			size_hint_x: 15
+			on_press: man.newStudents()
+		Button:
+			text: "Delete!"
+			size_hint_x: 15
+			on_press: man.deleteStudents()
+		Button:
+			text: "Replace!"
+			size_hint_x: 15
+			on_press: man.modifyStudents()
+	ListView:
+		id: list
+		columns: 2
+		adapter:
+			ListAdapter(data=["Andres Quiroz"], cls=main.StudentList)
+
